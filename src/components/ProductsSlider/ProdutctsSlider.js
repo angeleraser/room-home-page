@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { SliderContext } from "../../App/App";
 import { iconArrow, iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
 import { getNewItemsPositions } from "../../helpers/getNewItemsPosition";
 import { sliderCards } from "./fixtures";
-const disableTime = 1000;
+const disableTime = 500;
 export const ProdutctsSlider = () => {
+  const { setCurrentImageIndex } = useContext(SliderContext);
   const initialPositions = sliderCards.map((_, i, arr) =>
     i !== arr.length - 1
       ? {
@@ -26,6 +28,13 @@ export const ProdutctsSlider = () => {
       }, disableTime);
       const newPositions = getNewItemsPositions(itemsPos, direction);
       setItemPos(newPositions);
+      setCurrentImageIndex((currentVal) => {
+        if (currentVal === sliderCards.length - 1) {
+          return 0;
+        } else {
+          return currentVal + 1;
+        }
+      });
     };
   };
   return (
@@ -41,7 +50,7 @@ export const ProdutctsSlider = () => {
             }}
             key={i}
             className="ProductCard">
-            <div className="Section-Heading">{data.title + i}</div>
+            <div className="Section-Heading">{data.title}</div>
             <div className="Section-Description">{data.description}</div>
             <a
               className="ShopNow-Button"
