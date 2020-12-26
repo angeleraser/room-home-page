@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import Header from "../components/Header/Header";
 export const App = () => {
   return (
-    <div>
-      <Button />
-    </div>
+    <>
+      <Header />
+    </>
   );
 };

@@ -1,0 +1,22 @@
+:root {
+  /* Colours */
+  --dark-gray: hsl(0, 0%, 63%);
+  --dark-gray-2: hsl(0, 0%, 27%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font Size */
+  --fs-ss: 12px;
+  --fs-s: 16px;
+  --fs-l: 22px;
+  --fs-m: 30px;
+  --fs-x: 40px;
+
+  /* Font Family */
+  --ff-spartan: "Spartan", Helvetica, sans-serif;
+}

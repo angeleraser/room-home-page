@@ -1,0 +1,9 @@
+.Header {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url('../../../assets/jpg/mobile-image-hero-1.jpg');
+  min-height: 360px;
+  position: relative;
+}

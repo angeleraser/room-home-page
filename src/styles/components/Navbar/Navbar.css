@@ -1,0 +1,50 @@
+.Navbar {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 44px 24px;
+}
+
+.Navbar .ToggleMenuButton {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  z-index: 20;
+}
+
+.Navbar .ToggleMenuButton:focus {
+  outline: none;
+}
+
+.Navbar .AppLogo {
+  margin: 0 auto;
+}
+
+.Navbar .Menu {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: var(--white);
+  justify-content: flex-end;
+  font-size: 12px;
+  text-transform: lowercase;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 44px 24px;
+}
+
+.Navbar .Menu li:not(:last-child) {
+  margin-right: 32px;
+}
+
+.Navbar .Menu::after {
+  content: "";
+  display: inline-block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: calc(100vh - 102px);
+  left: 0;
+  bottom: 0;
+}

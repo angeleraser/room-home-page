@@ -1,0 +1,12 @@
+/* Base & Reset Styles */
+@import "./base/base.css";
+
+/* Fonts */
+@import "./fonts/fonts.css";
+
+/* Settings & Variables */
+@import "./settings/settings.css";
+
+/* Components */
+@import "./components/Header/Header.css";
+@import "./components/Navbar/Navbar.css";
