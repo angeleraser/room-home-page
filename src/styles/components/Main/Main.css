@@ -1,0 +1,41 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Main .AboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 58px 32px;
+  flex-shrink: 0;
+}
+
+.Main .AboutSection .Section-Heading {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.Main aside {
+  width: 100%;
+}
+
+.Main aside img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .Main {
+    flex-direction: row;
+    max-height: 400px;
+  }
+
+  .Main .AboutSection {
+    padding: 78px 56px;
+    min-width: 580px;
+  }
+}
