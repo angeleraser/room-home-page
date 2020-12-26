@@ -7,6 +7,9 @@
   display: flex;
   overflow: hidden;
   width: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 414px;
 }
 
 .ProductCard {
@@ -16,6 +19,8 @@
   padding: 72px 32px;
   width: 100%;
   flex-shrink: 0;
+  position: absolute;
+  transition: all 1s;
 }
 
 .ProductsSlider-root .Section-Heading {
