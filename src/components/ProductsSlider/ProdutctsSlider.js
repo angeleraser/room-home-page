@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { iconArrow, iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
 import { getNewItemsPositions } from "../../helpers/getNewItemsPosition";
 import { sliderCards } from "./fixtures";
-
+const disableTime = 1000;
 export const ProdutctsSlider = () => {
   const initialPositions = sliderCards.map((_, i, arr) =>
     i !== arr.length - 1
@@ -16,8 +16,14 @@ export const ProdutctsSlider = () => {
         }
   );
   const [itemsPos, setItemPos] = useState(initialPositions);
+  const [disableAction, setDisableAction] = useState(false);
   const handleItemsPostition = (direction) => {
     return () => {
+      setDisableAction(true);
+      const disableActionTimeout = setTimeout(() => {
+        setDisableAction(false);
+        clearTimeout(disableActionTimeout);
+      }, disableTime);
       const newPositions = getNewItemsPositions(itemsPos, direction);
       setItemPos(newPositions);
     };
@@ -48,10 +54,14 @@ export const ProdutctsSlider = () => {
         ))}
       </div>
       <div className="SliderControls">
-        <button onClick={handleItemsPostition("to left")}>
+        <button
+          disabled={disableAction}
+          onClick={handleItemsPostition("to left")}>
           {iconArrowLeft}
         </button>
-        <button onClick={handleItemsPostition("to right")}>
+        <button
+          disabled={disableAction}
+          onClick={handleItemsPostition("to right")}>
           {iconArrowRight}
         </button>
       </div>
