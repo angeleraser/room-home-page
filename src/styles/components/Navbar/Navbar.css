@@ -21,7 +21,7 @@
 }
 
 .Navbar .Menu {
-  display: flex;
+  display: none;
   align-items: center;
   position: fixed;
   background-color: var(--white);
@@ -34,11 +34,15 @@
   padding: 44px 24px;
 }
 
+.Navbar .Menu.is-open {
+  display: flex;
+}
+
 .Navbar .Menu li:not(:last-child) {
   margin-right: 32px;
 }
 
-.Navbar .Menu::after {
+.Navbar .Menu.is-open::after {
   content: "";
   display: inline-block;
   position: fixed;
@@ -47,4 +51,31 @@
   height: calc(100vh - 102px);
   left: 0;
   bottom: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .Navbar {
+    justify-content: flex-start;
+    padding: 64px;
+  }
+
+  .Navbar .AppLogo {
+    margin: 2px 0 0;
+  }
+
+  .Navbar .Menu {
+    display: flex;
+    background-color: transparent;
+    align-items: flex-start;
+    position: static;
+    width: auto;
+    padding: 0;
+    margin-left: 52px;
+    color: var(--white);
+    font-size: 14px;
+  }
+
+  .Navbar .ToggleMenuButton {
+    display: none;
+  }
 }

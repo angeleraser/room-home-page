@@ -14,22 +14,20 @@ const NavBar = () => {
         {!isOpen ? iconHamburguer : iconClose}
       </button>
       <div className="AppLogo">{appLogo}</div>
-      {isOpen && (
-        <ul className="Menu">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      )}
+      <ul className={`Menu${isOpen ? " is-open" : ""}`}>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Shop</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </nav>
   );
 };
