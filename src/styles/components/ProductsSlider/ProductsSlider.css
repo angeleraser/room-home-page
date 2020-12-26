@@ -1,13 +1,21 @@
 .ProductsSlider-root {
   position: relative;
+  width: 100%;
 }
 
-.ProductsSlider-Card {
+.ProductsSlider-root .CardsSlider-root {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ProductCard {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 72px 32px;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .ProductsSlider-root .Section-Heading {
@@ -20,24 +28,6 @@
   align-self: flex-start;
   font-weight: var(--fw-semibold);
   margin-top: 58px;
-}
-
-@media screen and (min-width: 1440px) {
-  .ProductsSlider-root {
-    max-width: 40%;
-  }
-
-  .ProductsSlider-Card {
-    padding: 120px 100px;
-  }
-
-  .ProductsSlider-root .Section-Heading {
-    font-size: calc(var(--fs-x) * 0.85);
-  }
-
-  .ProductsSlider-root .ShopNow-Button {
-    margin-top: 32px;
-  }
 }
 
 .ProductsSlider-root .SliderControls {
@@ -73,4 +63,22 @@
     width: 160px;
     height: 80px;
   }
+  .ProductsSlider-root {
+    max-width: 40%;
+  }
+
+  .ProductCard {
+    padding: 120px 100px;
+  }
+
+  .ProductsSlider-root .Section-Heading {
+    font-size: calc(var(--fs-x) * 0.85);
+  }
+
+  .ProductsSlider-root .ShopNow-Button {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }

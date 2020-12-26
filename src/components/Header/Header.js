@@ -7,7 +7,11 @@ const Header = () => {
     <header className="Header">
       <NavBar />
       <div className="SliderImages-root">
-        <img src="./src/assets/jpg/slider-1.jpg" alt="table" />
+        <img
+          className="SliderImage"
+          src="./src/assets/jpg/slider-1.jpg"
+          alt="table"
+        />
       </div>
       <ProdutctsSlider />
     </header>
