@@ -10,7 +10,9 @@ const NavBar = () => {
   };
   return (
     <nav className="Navbar">
-      <button onClick={handleClickOpen} className="ToggleMenuButton is-active">
+      <button
+        onClick={handleClickOpen}
+        className={`ToggleMenuButton${isOpen ? " is-active" : ""}`}>
         {!isOpen ? iconHamburguer : iconClose}
       </button>
       <div className="AppLogo">{appLogo}</div>

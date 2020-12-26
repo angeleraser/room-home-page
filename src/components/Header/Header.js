@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
+import { ProdutctsSlider } from "../ProductsSlider/ProdutctsSlider";
 
 const Header = () => {
   return (
@@ -11,6 +12,7 @@ const Header = () => {
           alt="carrousel slider header background"
         />
       </div>
+      <ProdutctsSlider />
     </header>
   );
 };

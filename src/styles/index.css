@@ -7,6 +7,10 @@
 /* Settings & Variables */
 @import "./settings/settings.css";
 
+/* Utils & Shared styles */
+@import "./utils/utils.css";
+
 /* Components */
 @import "./components/Header/Header.css";
 @import "./components/Navbar/Navbar.css";
+@import "./components/ProductsSlider/ProductsSlider.css";

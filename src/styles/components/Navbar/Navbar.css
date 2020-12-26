@@ -3,13 +3,21 @@
   align-items: flex-start;
   width: 100%;
   padding: 44px 24px;
+  max-width: 840px;
+  margin-bottom: 258px;
+  flex-shrink: 0;
+  z-index: 50;
 }
 
 .Navbar .ToggleMenuButton {
   background-color: transparent;
   padding: 0;
   border: none;
-  z-index: 20;
+  z-index: 10;
+}
+
+.Navbar .ToggleMenuButton.is-active {
+  position: fixed;
 }
 
 .Navbar .ToggleMenuButton:focus {
@@ -57,6 +65,8 @@
   .Navbar {
     justify-content: flex-start;
     padding: 64px;
+    margin-bottom: 0;
+    max-width: 60%;
   }
 
   .Navbar .AppLogo {

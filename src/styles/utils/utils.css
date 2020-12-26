@@ -1,0 +1,19 @@
+.Section-Heading {
+  color: var(--black);
+  font-weight: var(--fw-bold);
+  text-align: left;
+  margin-bottom: 26px;
+  max-width: 386px;
+}
+
+.Section-Description {
+  color: var(--dark-gray);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1440px) {
+  .Section-Description {
+    font-size: var(--fs-sl);
+  }
+}
