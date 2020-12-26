@@ -6,11 +6,8 @@ const Header = () => {
   return (
     <header className="Header">
       <NavBar />
-      <div className="Header-Wallpaper">
-        <img
-          src="./src/assets/jpg/slider-1.jpg"
-          alt="carrousel slider header background"
-        />
+      <div className="SliderImages-root">
+        <img src="./src/assets/jpg/slider-1.jpg" alt="table" />
       </div>
       <ProdutctsSlider />
     </header>

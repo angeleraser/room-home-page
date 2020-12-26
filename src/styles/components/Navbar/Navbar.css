@@ -70,7 +70,7 @@
   }
 
   .Navbar .AppLogo {
-    margin: 2px 0 0;
+    margin: 2px 52px 0;
   }
 
   .Navbar .Menu {
@@ -80,7 +80,6 @@
     position: static;
     width: auto;
     padding: 0;
-    margin-left: 52px;
     color: var(--white);
     font-size: 14px;
   }
