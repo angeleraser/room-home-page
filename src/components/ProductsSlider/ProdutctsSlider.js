@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+1import React, { useContext, useState } from "react";
 import { SliderContext } from "../../App/App";
 import { iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
 import { getNewItemsPositions } from "../../helpers/getNewItemsPosition";
@@ -30,11 +30,20 @@ export const ProdutctsSlider = () => {
       const newPositions = getNewItemsPositions(itemsPos, direction);
       setItemPos(newPositions);
       setCurrentImageIndex((currentVal) => {
-        if (Math.abs(currentVal) === sliderCards.length - 1) {
-          return 0;
-        } else {
-          return direction === 'to left' ? currentVal - 1 : currentVal + 1;
-        }
+        if(direction === 'to right') {
+          if (currentVal === sliderCards.length - 1) {
+                return 0;
+          } else {
+                return currentVal +1;
+          }
+         } else {
+           if (currentVal === 0){
+                return sliderCards.length - 1
+          } else {
+                return currentVal  - 1;
+          }
+         }
+           
       });
     };
   };
