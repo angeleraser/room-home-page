@@ -9,7 +9,7 @@
   width: 100%;
   position: relative;
   height: 100%;
-  min-height: 414px;
+  min-height: 458px;
 }
 
 .ProductCard {
@@ -31,8 +31,17 @@
   text-transform: uppercase;
   letter-spacing: 14px;
   align-self: flex-start;
+  border: none;
+  background-color: transparent;
   font-weight: var(--fw-semibold);
+  font-family: var(--ff-spartan);
+  font-size: var(--fs-ss);
   margin-top: 58px;
+  cursor: pointer;
+}
+
+.ProductsSlider-root .ShopNow-Button:focus {
+  outline: none;
 }
 
 .ProductsSlider-root .SliderControls {

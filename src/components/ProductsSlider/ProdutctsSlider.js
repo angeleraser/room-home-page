@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { SliderContext } from "../../App/App";
-import { iconArrow, iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
+import { iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
 import { getNewItemsPositions } from "../../helpers/getNewItemsPosition";
+import { ProductCard } from "../ProductCard/ProductCard";
 import { sliderCards } from "./fixtures";
 const disableTime = 500;
 export const ProdutctsSlider = () => {
@@ -41,25 +42,14 @@ export const ProdutctsSlider = () => {
     <div className="ProductsSlider-root">
       <div className="CardsSlider-root">
         {sliderCards.map((data, i) => (
-          <div
-            data-current={itemsPos[i].val === 0 ? true : false}
-            aria-current={itemsPos[i].val === 0 ? true : false}
-            style={{
-              transform: `translateX(${itemsPos[i].val}00%)`,
-              transition: `all ${itemsPos[i].transition}s`,
-            }}
+          <ProductCard
             key={i}
-            className="ProductCard">
-            <div className="Section-Heading">{data.title}</div>
-            <div className="Section-Description">{data.description}</div>
-            <a
-              className="ShopNow-Button"
-              href="http://none.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              Shop now {iconArrow}
-            </a>
-          </div>
+            isCurrent={itemsPos[i].val === 0}
+            title={data.title}
+            description={data.description}
+            position={itemsPos[i].val}
+            transitionTime={itemsPos[i].transition}
+          />
         ))}
       </div>
       <div className="SliderControls">

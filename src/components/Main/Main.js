@@ -12,10 +12,10 @@ export const Main = () => {
       <section className="AboutSection">
         <div className="Section-Heading">About our furniture</div>
         <div className="Section-Description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-          repellendus delectus provident natus vel, accusamus amet quibusdam
-          maiores adipisci sit, commodi nostrum deleniti quaerat tempora
-          officiis quos, asperiores voluptates fugiat.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam illo
+          commodi molestias quidem optio impedit earum eaque ipsam, voluptatem
+          est tempore totam officiis ut mollitia perferendis quibusdam
+          asperiores rerum aut!
         </div>
       </section>
       <aside>

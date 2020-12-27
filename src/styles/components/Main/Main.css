@@ -15,7 +15,12 @@
 
 .Main .AboutSection .Section-Heading {
   letter-spacing: 3px;
+  font-size: var(--fs-ss);
   text-transform: uppercase;
+}
+
+.Main .AboutSection .Section-Description {
+  max-width: auto;
 }
 
 .Main aside {
@@ -31,11 +36,10 @@
 @media screen and (min-width: 1280px) {
   .Main {
     flex-direction: row;
-    max-height: 400px;
   }
 
   .Main .AboutSection {
-    padding: 78px 56px;
+    padding: 70px 56px;
     min-width: 580px;
   }
 }

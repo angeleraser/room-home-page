@@ -3,6 +3,7 @@
   font-weight: var(--fw-bold);
   text-align: left;
   margin-bottom: 26px;
+  font-family: var(--ff-spartan);
   max-width: 386px;
 }
 
@@ -11,6 +12,8 @@
   font-size: 14px;
   line-height: 1.5;
   max-width: 400px;
+  width: 100%;
+  font-family: var(--ff-spartan);
 }
 
 @media screen and (min-width: 1440px) {
