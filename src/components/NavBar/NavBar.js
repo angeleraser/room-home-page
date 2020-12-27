@@ -15,7 +15,9 @@ const NavBar = () => {
         className={`ToggleMenuButton${isOpen ? " is-active" : ""}`}>
         {!isOpen ? iconHamburguer : iconClose}
       </button>
-      <div className="AppLogo">{appLogo}</div>
+      <a href="#" className="AppLogo">
+        {appLogo}
+      </a>
       <ul className={`Menu${isOpen ? " is-open" : ""}`}>
         <li>
           <a href="#">Home</a>
