@@ -1,4 +1,4 @@
-1import React, { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { SliderContext } from "../../App/App";
 import { iconArrowLeft, iconArrowRight } from "../../assets/svg/svg";
 import { getNewItemsPositions } from "../../helpers/getNewItemsPosition";
