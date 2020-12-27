@@ -49,8 +49,9 @@
   width: 112px;
   height: 56px;
   position: absolute;
-  top: -56px;
-  right: 0;
+  top: -84px;
+  left: 50%;
+  transform:translateX(-50%);
 }
 
 .ProductsSlider-root .SliderControls button {
@@ -71,11 +72,11 @@
 @media screen and (min-width: 1280px) {
   .ProductsSlider-root .SliderControls {
     top: auto;
-    right: auto;
-    bottom: 0;
+    bottom:0;
     left: 0;
     width: 160px;
     height: 80px;
+    transform:translateX(0);
   }
   .ProductsSlider-root {
     max-width: 40%;
@@ -94,5 +95,3 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-}
