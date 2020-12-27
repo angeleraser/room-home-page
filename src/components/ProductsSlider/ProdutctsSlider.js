@@ -30,7 +30,7 @@ export const ProdutctsSlider = () => {
       const newPositions = getNewItemsPositions(itemsPos, direction);
       setItemPos(newPositions);
       setCurrentImageIndex((currentVal) => {
-        if (Math.abs(currentVal) === sliderCards.length - 1) {
+        if (((Math.abs(currentVal) === sliderCards.length - 1) && direction === 'to left')|| currentVal === sliderCards.length - 1) {
           return 0;
         } else {
           return direction === 'to left' ? Math.abs(currentVal - 1) : currentVal + 1;
