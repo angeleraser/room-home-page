@@ -30,20 +30,19 @@ export const ProdutctsSlider = () => {
       const newPositions = getNewItemsPositions(itemsPos, direction);
       setItemPos(newPositions);
       setCurrentImageIndex((currentVal) => {
-        if(direction === 'to right') {
-          if (currentVal === sliderCards.length - 1) {
-                return 0;
+        if(direction === 'to right'){
+           if (currentVal === sliderCards.length - 1) {
+               return 0;
           } else {
-                return currentVal +1;
+               return currentVal +1;
           }
-         } else {
-           if (currentVal === 0){
-                return sliderCards.length - 1
+        } else {
+            if (currentVal === 0){
+               return sliderCards.length - 1;
           } else {
-                return currentVal  - 1;
+               return currentVal  - 1;
           }
-         }
-           
+        }
       });
     };
   };
