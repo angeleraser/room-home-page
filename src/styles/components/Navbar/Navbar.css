@@ -58,9 +58,9 @@
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: calc(100vh - 102px);
+  height: 100vh;
   left: 0;
-  bottom: 0;
+  top: 102px;
 }
 
 @media screen and (min-width: 1280px) {
